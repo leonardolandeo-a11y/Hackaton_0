@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ARCHIVO 2031 - Terminal de recuperación de la bitácora del proyecto CS2031."
+    />
+    <meta name="equipo" content="???" />
+    <title>ARCHIVO 2031 · Terminal de Recuperación</title>
+    <link rel="stylesheet" href="styles/base.css" />
+  </head>
+
+  <body class="crt">
+    <a class="salto-contenido" href="#inicio">Saltar al contenido</a>
+
+    <header class="cabecera">
+      <p class="cabecera__marca">
+        <span class="cabecera__prompt">utec@cs2031:~$</span>
+        <span class="cabecera__titulo">ARCHIVO&nbsp;2031</span>
+      </p>
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li class="nav__item"><a class="nav__enlace" href="#inicio">Inicio</a></li>
+          <li class="nav__item"><a class="nav__enlace" href="#mision">Misión</a></li>
+          <li class="nav__item"><a class="nav__enlace" href="#bitacora">Bitácora</a></li>
+          <li class="nav__item"><a class="nav__enlace" href="#equipo">Equipo</a></li>
+          <li class="nav__item"><a class="nav__enlace" href="#sello">Sello</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <h1 class="hero__titulo">Terminal de Recuperación</h1>
+        <p class="hero__lead">
+          Alguien ejecutó un script de &ldquo;limpieza&rdquo; sobre el
+          repositorio del curso y se llevó por delante la bitácora. Sus
+          fragmentos siguen dentro de este repositorio, pero ninguno está en el
+          árbol de trabajo.
+        </p>
+        <p class="hero__nota">
+          <span class="parpadeo" aria-hidden="true">▊</span>
+          Estado del archivo: <strong class="hero__estado">INCOMPLETO</strong>
+        </p>
+      </section>
+
+      <section class="mision" id="mision">
+        <h2 class="mision__titulo">Misión</h2>
+        <ol class="mision__lista">
+          <li>Recuperar los fragmentos dispersos en la historia de Git.</li>
+          <li>Reconstruir el <em>sello</em> y estampar la terminal.</li>
+          <li>Desplegar la terminal en GitHub&nbsp;Pages.</li>
+        </ol>
+      </section>
+
+      <section class="bitacora" id="bitacora">
+        <h2 class="bitacora__titulo">Fragmentos de la bitácora</h2>
+        <p class="bitacora__ayuda">
+          Dos ranuras, dos palabras en MAYÚSCULAS. Reemplaza los
+          <code>???</code> por la palabra recuperada.
+        </p>
+        <ul class="bitacora__lista">
+          <li class="frag" data-frag="01">
+            <span class="frag__id">FRAG-01</span>
+            <code class="frag__palabra">???</code>
+          </li>
+          <li class="frag" data-frag="02">
+            <span class="frag__id">FRAG-02</span>
+            <code class="frag__palabra">???</code>
+          </li>
+        </ul>
+      </section>
+
+      <section class="equipo" id="equipo">
+        <h2 class="equipo__titulo">Equipo de recuperación</h2>
+        <p class="equipo__lista">Turno de guardia: <span class="equipo__nombres">???</span></p>
+        <div class="equipo__grid">
+          <article class="tarjeta">
+            <img
+              class="tarjeta__foto"
+              src="https://placehold.co/160x160/0b1020/39ff14?text=%3F"
+              alt="Fotografía pendiente del integrante 1"
+            />
+            <h3 class="tarjeta__nombre">NOMBRE PENDIENTE 1</h3>
+            <p class="tarjeta__rol">ROL PENDIENTE</p>
+            <p class="tarjeta__usuario">@usuario-github-1</p>
+            <ul class="tarjeta__enlaces">
+              <li><a class="tarjeta__enlace" href="https://github.com/">GitHub</a></li>
+              <li><a class="tarjeta__enlace" href="https://www.linkedin.com/">LinkedIn</a></li>
+            </ul>
+          </article>
+          <article class="tarjeta">
+            <img
+              class="tarjeta__foto"
+              src="https://placehold.co/160x160/0b1020/39ff14?text=%3F"
+              alt="Fotografía pendiente del integrante 2"
+            />
+            <h3 class="tarjeta__nombre">NOMBRE PENDIENTE 2</h3>
+            <p class="tarjeta__rol">ROL PENDIENTE</p>
+            <p class="tarjeta__usuario">@usuario-github-2</p>
+            <ul class="tarjeta__enlaces">
+              <li><a class="tarjeta__enlace" href="https://github.com/">GitHub</a></li>
+              <li><a class="tarjeta__enlace" href="https://www.linkedin.com/">LinkedIn</a></li>
+            </ul>
+          </article>
+          <article class="tarjeta">
+            <img
+              class="tarjeta__foto"
+              src="https://placehold.co/160x160/0b1020/39ff14?text=%3F"
+              alt="Fotografía pendiente del integrante 3"
+            />
+            <h3 class="tarjeta__nombre">NOMBRE PENDIENTE 3</h3>
+            <p class="tarjeta__rol">ROL PENDIENTE</p>
+            <p class="tarjeta__usuario">@usuario-github-3</p>
+            <ul class="tarjeta__enlaces">
+              <li><a class="tarjeta__enlace" href="https://github.com/">GitHub</a></li>
+              <li><a class="tarjeta__enlace" href="https://www.linkedin.com/">LinkedIn</a></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="sello" id="sello">
+        <h2 class="sello__titulo">Sello de recuperación</h2>
+        <img
+          class="sello__glifo"
+          src="assets/sello.svg"
+          alt="Glifo del sello de recuperación del ARCHIVO 2031"
+          width="120"
+          height="120"
+        />
+        <p class="sello__ayuda">
+          Escribe aquí las dos palabras en orden, separadas por un guion.
+        </p>
+        <p><code id="sello-valor" class="sello__valor">???</code></p>
+        <p id="sello-estado" class="sello__estado" role="status">
+          Sello sin verificar.
+        </p>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <p class="pie__texto">
+        CS2031 · Desarrollo Basado en Plataformas · UTEC — Hackatón 0
+      </p>
+    </footer>
+    <script src="scripts/sello.js" defer></script>
+  </body>
+</html>

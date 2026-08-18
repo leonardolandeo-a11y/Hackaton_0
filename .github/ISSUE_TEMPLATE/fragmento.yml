@@ -1,0 +1,37 @@
+name: "Recuperar un fragmento"
+description: "Abre un issue por cada fragmento de la bitácora."
+title: "[FRAG-0X] Recuperar fragmento"
+labels: ["arqueologia"]
+body:
+  - type: dropdown
+    id: fragmento
+    attributes:
+      label: Fragmento
+      options: ["FRAG-01", "FRAG-02", "FRAG-03", "FRAG-04", "FRAG-05", "FRAG-06"]
+    validations:
+      required: true
+
+  - type: input
+    id: responsable
+    attributes:
+      label: Responsable (usuario de GitHub)
+      placeholder: "@usuario"
+    validations:
+      required: true
+
+  - type: textarea
+    id: hipotesis
+    attributes:
+      label: Hipótesis
+      description: "¿Dónde crees que está y por qué? Escríbelo ANTES de buscar."
+    validations:
+      required: true
+
+  - type: textarea
+    id: comandos
+    attributes:
+      label: Comandos probados
+      description: "Deja el rastro, incluidos los intentos fallidos."
+      render: shell
+    validations:
+      required: true

@@ -1,0 +1,61 @@
+name: Desplegar en GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  desplegar:
+    environment:
+      name: github-pages
+      url: ${{ steps.despliegue.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: No desplegar un sitio roto
+        run: python3 scripts/audit.py
+
+      # Mientras el equipo no active Pages, este workflow NO falla: avisa y se
+      # queda quieto. Una X roja desde el primer push solo asusta; el aviso
+      # dice qué hacer y el resto de la auditoría sigue siendo real.
+      - name: ¿Está activado GitHub Pages?
+        id: comprobar
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api "repos/${{ github.repository }}/pages" >/dev/null 2>&1; then
+            echo "activo=si" >> "$GITHUB_OUTPUT"
+            echo "GitHub Pages está activado: se despliega."
+          else
+            echo "activo=no" >> "$GITHUB_OUTPUT"
+            echo "::warning title=Falta activar GitHub Pages::\
+          Vayan a Settings -> Pages y en Source elijan 'GitHub Actions'. \
+          Hasta entonces la página no se publica. El repositorio debe ser publico."
+          fi
+
+      - if: steps.comprobar.outputs.activo == 'si'
+        uses: actions/configure-pages@v5
+
+      - if: steps.comprobar.outputs.activo == 'si'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - id: despliegue
+        if: steps.comprobar.outputs.activo == 'si'
+        uses: actions/deploy-pages@v4
