@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Sello ARCHIVO 2031">
+  <title>Sello de recuperación ARCHIVO 2031</title>
+  <circle cx="60" cy="60" r="55" fill="none" stroke="#39ff14" stroke-width="2" />
+  <circle cx="60" cy="60" r="46" fill="none" stroke="#39ff14" stroke-width="1" stroke-dasharray="4 6" />
+  <path d="M60 22 L92 60 L60 98 L28 60 Z" fill="none" stroke="#7cf7a0" stroke-width="2" />
+  <path d="M44 60 L56 72 L78 48" fill="none" stroke="#39ff14" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="60" y="112" text-anchor="middle" font-family="monospace" font-size="9" fill="#39ff14">2031</text>
+</svg>
