@@ -1,4 +1,3 @@
-
 ======================================
    ARCHIVO 2031 - FRAGMENTO 02/02
 ======================================
@@ -7,4 +6,3 @@ palabra: SIMETRIA
 codigo : be61ae86f8
 --------------------------------------
 Transcribir tal cual. Se compara linea a linea.
-
